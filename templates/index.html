@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block title%}
+Home
+{% endblock %}
+
+{% block main %}
+<div>
+<form method="post" action="/">
+  <div class="mb-3">
+    <label for="song_url">Video URL: </label>
+    <input type="text" name="url"  class="form-control"/>
+  </div>
+  <div>
+    <input type="radio" name="downloadtype" value="audio" id="audio" checked><label for="audio">Audio</label>
+    <input type="radio" name="downloadtype" value="video" id="video"><label for="video">Video</label>
+  </div>
+  <input type="hidden" name="x" value="video">
+  <div class="mb-3">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+
+<form method="post" action="/">
+  <div class="mb-3">
+    <label for="playlist_url">Playlist URL: </label>
+    <input id="playlist_url" type="text" name="url" class="form-control">
+  </div>
+  <div>
+    <input type="radio" name="downloadtype" value="audio" id="audio" checked><label for="audio">Audio</label>
+    <input type="radio" name="downloadtype" value="video" id="video"><label for="video">Video</label>
+  </div>
+  <input type="hidden" name="x" value="playlist">
+  <div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+
+</div>
+{% endblock %}
+

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Search
+{% endblock %}
+
+{% block main %}
+  {% if results %}
+    {% for video in results%}
+    <div>
+      <div>
+        <a class="btn btn-primary" href="/download?url={{video.watch_url}}&downloadtype=audio">
+          <h2>{{video.title}}</h2>
+        </a>
+      </div>
+      <!--<form action="/" method="POST">
+        <input name="url" type="hidden" value={{video.watch_url}}>
+        <input name="downloadtype" type="radio" value="audio" id="audio" checked><label for="audio">audio</label>
+        <input name="downloadtype" type="radio" value="video" id="video"><label for="video">video</label>
+        <input name="x" type="hidden" value="video">
+        <button class="btn btn-primary">Download</button>
+        <form>-->
+    </div>
+    {% endfor %}
+  {% endif %}
+{% endblock %}
+

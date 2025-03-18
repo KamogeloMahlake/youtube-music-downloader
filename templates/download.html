@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title%}
+Download
+{% endblock %}
+
+{% block main %}
+    <div>
+        <input id="url" value="{{url}}" type="hidden">
+        <input id="downloadtype" value="{{download_type}}" type="hidden">
+        <input id="x" value="{{x}}" type="hidden">
+    </div>    
+{% endblock %}
